@@ -21,3 +21,5 @@ const BookingForm = () => {
   <input type="submit" defaultValue="Make Your reservation" />
 </form>
 }
+
+export default BookingForm;
