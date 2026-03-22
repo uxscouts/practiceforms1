@@ -4,16 +4,19 @@ import { useState } from 'react';
 const BookingForm = () => {
   const [count, setCount] = useState(0);
   const [ocassionState, setOccassionState] = useState("Friends");
+  const [resTime, setResTime] = useState("19:00");
+  
   return (
     <>
     <h3>Form Values</h3>
-    <p>{ocassionState}</p>
+    <p>Occassion: {ocassionState}</p>
+    <p>Reservation Time: {resTime}</p>
     <hr/>
     <form style={{ display: "grid", maxWidth: 200, gap: 20 }}>
       <label htmlFor="res-date">Choose date</label>
       <input type="date" id="res-date" />
       <label htmlFor="res-time">Choose time</label>
-      <select id="res-time ">
+      <select id="res-time" onChange={e=>setResTime(e.target.value)}>
         <option>17:00</option>
         <option>18:00</option>
         <option>19:00</option>
