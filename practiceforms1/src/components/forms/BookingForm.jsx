@@ -1,5 +1,14 @@
+import { useState } from 'react';
+
+
 const BookingForm = () => {
+  const [count, setCount] = useState(0);
+  const [ocassionState, setOccassionState] = useState("Friends");
   return (
+    <>
+    <h3>Form Values</h3>
+    <p>{ocassionState}</p>
+    <hr/>
     <form style={{ display: "grid", maxWidth: 200, gap: 20 }}>
       <label htmlFor="res-date">Choose date</label>
       <input type="date" id="res-date" />
@@ -15,12 +24,21 @@ const BookingForm = () => {
       <label htmlFor="guests">Number of guests</label>
       <input type="number" placeholder={1} min={1} max={10} id="guests" />
       <label htmlFor="occasion">Occasion</label>
-      <select id="occasion">
+      <select id="occasion" onChange={e =>setOccassionState(e.target.value)}>
+        <option>Friends</option>
         <option>Birthday</option>
         <option>Anniversary</option>
       </select>
       <input type="submit" defaultValue="Make Your reservation" />
     </form>
+    <hr/>
+    <p>Counter here</p>
+
+       <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>
+        Increase
+      </button>   
+    </>
   )
 }
 
