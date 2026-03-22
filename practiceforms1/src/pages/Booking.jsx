@@ -1,7 +1,12 @@
-
+import BookingForm from "../components/forms/BookingForm.jsx"
 
 const Booking = () => {
-  return <h2>Booking Page</h2>;
+  return (
+    <>
+    <h1>Booking Form</h1>
+    <BookingForm/>
+    </>
+  )
 
 };
 export default Booking;
