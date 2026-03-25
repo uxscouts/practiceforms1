@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const AvailableTimes = ({ onMessageChange }) => {
+const AvailableTimes2 = ({ onTimeChange }) => {
 
    const [childInput, setChildInput] = useState('');
 
@@ -8,7 +8,8 @@ const AvailableTimes = ({ onMessageChange }) => {
    const newValue = event.target.value;
     setChildInput(newValue);
     // Call the parent's function with the child's data
-    onMessageChange(newValue);
+    // onMessageChange(newValue);
+    onTimeChange(newValue);
   };
 
 
@@ -48,25 +49,8 @@ const AvailableTimes = ({ onMessageChange }) => {
         ))}
       </select>
       
-      {/*
-      {selectedTime && (
-        <p className="green">You selected: <strong>{selectedTime}</strong></p>
-      )}
-        */}
-{/*
-      <div>
-        <h2>Child Component</h2>
-        <input
-          type="text"
-          value={childInput}
-          onChange={handleInputChange}
-          placeholder="Type here to update parent"
-        />
-      </div>
-*/}
-
     </div>
   );
 };
 
-export default AvailableTimes;
+export default AvailableTimes2;

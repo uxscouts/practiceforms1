@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import AvailableTimes from "./AvailableTimes";
+ import AvailableTimes from "./AvailableTimes";
+// import AvailableTimes2 from "./AvailableTimes2";
 
 const BookingForm = () => {
   const [ocassionState, setOccassionState] = useState("Friends");
@@ -20,15 +21,19 @@ const BookingForm = () => {
     setMessage(newMessage);
   };
 
+ const [bookingTime, setBookingTime] = useState('Not Set');
 
 
+  const updateBookingTime = (newTime) => {
+    setBookingTime(newTime);
+  };
 
   return (
     <>
 
     <div>
-      <h1>Parent Component</h1>
-      <p>Message: {message}</p>
+      <h1 className="green">Parent Component</h1>
+      <p className="green">Booking Time: {message}</p>
       {/* Pass the handler function as a prop */}
     {/* <ChildComponent onMessageChange={updateMessage} /> */}
     </div>
@@ -44,7 +49,8 @@ const BookingForm = () => {
       <label htmlFor="res-date">Choose date</label>
       <input type="date" id="res-date"  onChange={e =>setResDate(e.target.value)}></input>
 
-    <AvailableTimes onMessageChange={updateMessage}/>
+    <AvailableTimes onMessageChange={updateMessage}/> 
+   {/* <AvailableTimes2 onMessageChange={updateBookingTime}/>*/}
 
     {/*}  <label htmlFor="res-time">Choose time</label>
       <select id="res-time" onChange={e=>setResTime(e.target.value)}>
