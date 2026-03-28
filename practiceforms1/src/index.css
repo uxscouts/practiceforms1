@@ -1,3 +1,32 @@
 .green {
   color: green;
 }
+
+#time-select {
+  margin-top: 10px; 
+  padding: 5px; 
+  width: 200px;
+}
+
+
+/* App.css or a dedicated Menu.css file */
+.menu-container {
+  display: grid;
+  /* Creates columns with equal width (1fr) or specific widths (e.g., max-content auto) */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+  gap: 10px; /* Adds space between menu items */
+  list-style: none; /* Removes default list bullets */
+  padding: 0;
+  margin: 0;
+  align-items: center; /* Centers items vertically */
+  background-color: #f0f0f0; 
+}
+
+.menu-item {
+  /* Menu items automatically become grid items */
+  padding: 10px 15px;
+  text-align: center;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  color: black;
+}

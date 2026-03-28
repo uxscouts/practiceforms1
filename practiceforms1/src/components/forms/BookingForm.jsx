@@ -21,24 +21,24 @@ const BookingForm = () => {
     setMessage(newMessage);
   };
 
+  {/*
  const [bookingTime, setBookingTime] = useState('Not Set');
-
-
   const updateBookingTime = (newTime) => {
     setBookingTime(newTime);
   };
+*/}
 
   return (
     <>
 
     <div>
       <h1 className="green">Parent Component</h1>
+       <h3 className="green">Form Values</h3>
       <p className="green">Booking Time: {message}</p>
       {/* Pass the handler function as a prop */}
     {/* <ChildComponent onMessageChange={updateMessage} /> */}
     </div>
 
-    <h3 className="green">Form Values</h3>
     <p className="green">Occassion: {ocassionState}</p>
     <p className="green"> Date {resDate}</p>
     <p className="green"> No. of Guests {guestsCount}</p>
@@ -51,17 +51,6 @@ const BookingForm = () => {
 
     <AvailableTimes onMessageChange={updateMessage}/> 
    {/* <AvailableTimes2 onMessageChange={updateBookingTime}/>*/}
-
-    {/*}  <label htmlFor="res-time">Choose time</label>
-      <select id="res-time" onChange={e=>setResTime(e.target.value)}>
-        <option>17:00</option>
-        <option>18:00</option>
-        <option>19:00</option>
-        <option>20:00</option>
-        <option>21:00</option>
-        <option>22:00</option>
-      </select>
-      */}
 
 
       <label htmlFor="guests">Number of guests</label>

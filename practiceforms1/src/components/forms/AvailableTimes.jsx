@@ -30,6 +30,8 @@ const AvailableTimes = ({ onMessageChange }) => {
 
   return (
     <div>
+      <p>AvailableTimes.jsx</p>
+      <p><span className="green"></span></p>
       <label htmlFor="time-select">Choose a booking time:</label>
       <br />
       <select
@@ -37,12 +39,10 @@ const AvailableTimes = ({ onMessageChange }) => {
         value={childInput}
        // onChange={(e) => setSelectedTime(e.target.value)}
         onChange={handleInputChange}
-        style={{ marginTop: '10px', padding: '5px', width: '200px' }}
       >
-        <option value="">--Select a time--</option>
-
         {availableTimes.map((time, index) => (
-          <option key={index} value={time}>
+          <option 
+          key={index} value={time}>
             {time}
           </option>
         ))}

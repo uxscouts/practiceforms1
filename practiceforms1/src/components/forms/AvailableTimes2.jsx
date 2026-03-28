@@ -31,6 +31,7 @@ const AvailableTimes2 = ({ onTimeChange }) => {
 
   return (
     <div>
+      <p>AvailableTimes2.jsx</p>
       <label htmlFor="time-select">Choose a booking time:</label>
       <br />
       <select
